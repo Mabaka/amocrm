@@ -12,10 +12,10 @@ export default defineConfig({
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
-  },
-  server:{
-    host:true,
-    port: Number(process.env.VITE_PORT),
+  },  
+  server:{    
+    host: process.env.VITE_SERVER,
+    port: Number(process.env.VITE_PORT),    
     proxy:{
       "/api": {
         target: process.env.VITE_API_SERVER,
