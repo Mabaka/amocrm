@@ -1,0 +1,4 @@
+VITE_CLIENT_ID=''
+VITE_PORT='8080'
+VITE_SERVER='http://localhost'
+VITE_API_SERVER=''

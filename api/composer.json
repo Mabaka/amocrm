@@ -1,0 +1,20 @@
+{
+    "name": "amocrm/api",
+    "description": "api for amocrm",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",                        
+            "Controllers\\": "app/controllers/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kozlov Nikita"
+        }
+    ],
+    "require": {
+        "amocrm/amocrm-api-library": "*",
+        "amocrm/oauth2-amocrm": "^2.0"
+    }
+}
