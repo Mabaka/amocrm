@@ -16,7 +16,7 @@
 - Проверить что backend и frontend доступны(локально)
 - В vite.config настроен прокси на backend, поэтому обращаться можно через <http://localhost:8080/api>. Таким образом, добавление лида будет по адресу (<http://localhost:8080/api/lead/add/>). Порт и адрес такие при стандартной настройки. У вас может отличаться, если укажите в перменных среды. localhost:8080 считается сервер фронта.
 - Вывести во внешнюю сеть backend сервер или frontend. Указать в env на фронте для работы прокси. Если выведен frontend api вызывается только через
-<http://frontserver.ru/api/lead/add>.
+<http://yourfrontserv.ru/api/>.
 
 ### Запуск frontend
 
@@ -25,7 +25,7 @@
 - Установить переменные среды(файл env), предварительно поставив точку перед именем файла
   - VITE_CLIENT_ID - ID интеграции
   - VITE_PORT - порт, на котором будет запущен фронтенд. 8080 по умолчанию
-  - VITE_SERVER - путь, по которому будет доступен фронт. <http://localhost> по умолчанию
+  - VITE_SERVER - путь, по которому будет доступен фронт. <localhost> по умолчанию
   - VITE_API_SERVER - адрес бэка. Пример: <http://yourserver.ru/amocrm/api/app/>
 - Запустить frontend можно без сборки:
    `npm run dev`
@@ -53,8 +53,8 @@
 
 ### Обращения при стандартной настройке
 
-- <http://yourserver.ru/amocrm/api/app/auth/> вручную не вызывается, нужно указывать в интергации для аутентификации(редирект на этот адрес) или <http://localhost:8080/api/auth/>
-- <http://yourserver.ru/amocrm/api/app/lead/add> или <http://localhost:8080/api/lead/add>(прокси) - POST запрос на добавление лида.
+- <http://yourserver.ru/amocrm/api/app/auth/> вручную не вызывается, нужно указывать в интергации для аутентификации(редирект на этот адрес) или <http://yourfrontserv.ru/api/auth/>
+- <http://yourserver.ru/amocrm/api/app/lead/add> или <http://yourfrontserv.ru/api/lead/add>(прокси) - POST запрос на добавление лида.
 
 ## Алгоритм работы
 
